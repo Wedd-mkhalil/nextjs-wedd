@@ -1,0 +1,261 @@
+/* Warm, friendly wedding palette */
+:root {
+  --cream: #faf8f5;
+  --blush: #e8d5d0;
+  --sage: #9caa97;
+  --terracotta: #c47b5b;
+  --charcoal: #3d3d3d;
+  --soft-brown: #6b5b52;
+  --white: #ffffff;
+  --shadow: rgba(61, 61, 61, 0.08);
+  --shadow-strong: rgba(61, 61, 61, 0.12);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  margin: 0;
+  font-family: "Source Sans 3", system-ui, sans-serif;
+  background: var(--cream);
+  color: var(--charcoal);
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-weight: 500;
+  line-height: 1.2;
+  margin: 0 0 0.5em;
+}
+
+h1 { font-size: clamp(2rem, 5vw, 3rem); }
+h2 { font-size: clamp(1.5rem, 3vw, 2rem); }
+h3 { font-size: 1.25rem; }
+
+a {
+  color: var(--terracotta);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+a:hover {
+  color: var(--soft-brown);
+}
+
+/* Layout */
+.layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  flex: 1;
+}
+
+/* Nav */
+.nav {
+  padding: 1rem 1.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  background: var(--white);
+  box-shadow: 0 1px 0 var(--shadow);
+}
+
+.nav a {
+  font-weight: 500;
+  color: var(--soft-brown);
+}
+.nav a:hover {
+  color: var(--terracotta);
+}
+
+/* Hero / Home */
+.hero {
+  text-align: center;
+  padding: 4rem 1.5rem 3rem;
+  background: linear-gradient(180deg, var(--blush) 0%, var(--cream) 100%);
+}
+
+.hero h1 {
+  margin-bottom: 0.25em;
+  color: var(--charcoal);
+}
+
+.hero .subtitle {
+  font-size: 1.125rem;
+  color: var(--soft-brown);
+  margin: 0;
+}
+
+/* Wedding details block */
+.details {
+  max-width: 28rem;
+  margin: 0 auto 3rem;
+  padding: 0 1.5rem;
+}
+
+.details-card {
+  background: var(--white);
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 24px var(--shadow);
+  text-align: center;
+}
+
+.details-card h2 {
+  color: var(--charcoal);
+  margin-bottom: 1rem;
+}
+
+.details-card .date,
+.details-card .time {
+  font-size: 1.125rem;
+  color: var(--soft-brown);
+  margin-bottom: 0.5rem;
+}
+
+.details-card .venue {
+  font-weight: 600;
+  color: var(--charcoal);
+  margin: 1rem 0 0.25rem;
+}
+
+.details-card .address {
+  color: var(--soft-brown);
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+.cta-wrap {
+  text-align: center;
+  padding: 0 1.5rem 4rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.75rem;
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: inherit;
+  color: var(--white);
+  background: var(--terracotta);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.1s ease;
+  text-decoration: none;
+}
+.btn:hover {
+  background: var(--soft-brown);
+}
+.btn:active {
+  transform: scale(0.98);
+}
+
+/* RSVP page */
+.rsvp-page {
+  max-width: 24rem;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+}
+
+.rsvp-page h1 {
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.rsvp-page .guest-greeting {
+  text-align: center;
+  color: var(--soft-brown);
+  margin-bottom: 2rem;
+}
+
+.rsvp-form {
+  background: var(--white);
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 24px var(--shadow);
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--charcoal);
+}
+
+.radio-group {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.radio-option {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  font-weight: 400;
+}
+
+.radio-option input {
+  width: 1.125rem;
+  height: 1.125rem;
+  accent-color: var(--terracotta);
+  cursor: pointer;
+}
+
+.rsvp-form .btn {
+  width: 100%;
+  margin-top: 0.5rem;
+  padding: 0.875rem;
+}
+
+.thank-you {
+  text-align: center;
+  padding: 2rem;
+  background: var(--white);
+  border-radius: 12px;
+  box-shadow: 0 4px 24px var(--shadow);
+}
+
+.thank-you h2 {
+  color: var(--sage);
+  margin-bottom: 0.5rem;
+}
+
+.thank-you p {
+  color: var(--soft-brown);
+  margin: 0;
+}
+
+/* About page (keep simple) */
+.about-page {
+  max-width: 36rem;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+  text-align: center;
+}
+
+.about-page h1 {
+  margin-bottom: 1rem;
+}
+
+.about-page p {
+  color: var(--soft-brown);
+  margin: 0 0 1rem;
+}
